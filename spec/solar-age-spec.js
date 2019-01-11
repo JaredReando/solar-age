@@ -1,11 +1,19 @@
-import { earthAge, millisecondsToDays } from './../src/starchild.js';
+import { StarChild } from './../src/starchild.js';
 
 
-describe('earthAge', function() {
+describe('StarChild', function() {
   let userBirthday;
+  let userSex;
+  let starObject;
 
   beforeEach(function() {
-    userBirthday = new Date("07-29-1987");
+    userBirthday = "07-29-1987";
+    userSex = 'male';
+    starObject = new StarChild(userBirthday, userSex);
+  });
+
+  it("creates a new StarChild object", function() {
+    expect(starObject.birthday).toEqual("07-29-1987");
   });
 
   it("returns age in Earth years", function() {
