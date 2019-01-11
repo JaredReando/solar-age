@@ -1,4 +1,4 @@
-import { Age } from './../src/age';
+import { StarChild } from './../src/starchild.js';
 
 
 describe('Age', function() {

@@ -1,22 +1,23 @@
-import { Haiku } from './haiku';
+import { StarChild } from './starchild';
 import './styles.css';
 import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+
+
 $(document).ready(function() {
-  $('#haiku-button').submit(function(event) {
+  $('#solar-submit').submit(function(event) {
     event.preventDefault();
-    let textInput = $('#haiku-text').val()
-    let newHaiku = new Haiku(textInput);
+    let userDate = $('#birthday').val();
 
+    let userBirthday = new StarChild();
+    debugger;
+    let userEarthAge = userBirthday.earthAge();
 
-
-    // $('#test-span').text(`.}`);
-
-    $('#haiku-readout').text('23');
-    $('#haiku-text').val('');
+    $('#solar-readout').text(userEarthAge);
+    $('#birthday').val('');
 
   });
 });
