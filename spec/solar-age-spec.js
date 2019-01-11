@@ -21,39 +21,39 @@ describe('StarChild', function() {
   });
 
   it("returns age in Earth years", function() {
-    expect(earthAge(userBirthday)).toEqual(31);
+    expect(starObject.planetAge('earth')).toEqual('31.46');
   });
 
   it("returns age in Mercury years.", function() {
-    expect(userBirthday.mercuryAge()).toEqual(0);
+    expect(starObject.planetAge('mercury')).toEqual('130.61');
   });
 
   it("returns age in Venus years.", function() {
-    expect(userBirthday.venusAge()).toEqual(0);
+    expect(starObject.planetAge('venus')).toEqual('51.13');
   });
 
   it("returns age in Mars years.", function() {
-    expect(userBirthday.marsAge()).toEqual(0);
+    expect(starObject.planetAge('mars')).toEqual('16.72');
   });
 
   it("returns age in Jupiter years.", function() {
-    expect(userBirthday.jupiterAge()).toEqual(0);
+    expect(starObject.planetAge('jupiter')).toEqual('2.65');
   });
 
   it("returns age in Saturn years.", function() {
-    expect(userBirthday.saturnAge()).toEqual(0);
+    expect(starObject.planetAge('saturn')).toEqual('1.07');
   });
 
   it("returns age in Uranus years.", function() {
-    expect(userBirthday.uranusAge()).toEqual(0);
+    expect(starObject.planetAge('uranus')).toEqual('0.37');
   });
 
   it("returns age in Neptune years.", function() {
-    expect(userBirthday.neptuneAge()).toEqual(0);
+    expect(starObject.planetAge('neptune')).toEqual('0.19');
   });
 
   it("returns age in Pluto years.", function() {
-    expect(userBirthday.plutoAge()).toEqual(0);
+    expect(starObject.planetAge('pluto')).toEqual('0.13');
   });
 
 });

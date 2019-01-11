@@ -16,6 +16,15 @@ export class StarChild {
     return ageInYears;
   }
 
+  ageInDays() {
+    let currentDay = new Date();
+    let birthDate = new Date(this.birthday);
+    let ageInMilliseconds = currentDay - birthDate;
+    let ageInDays = this.millisecondsToDays(ageInMilliseconds);
+
+    return ageInDays;
+
+  }
 
   millisecondsToDays(milliseconds) {
     let seconds = (milliseconds/1000);
@@ -36,72 +45,53 @@ export class StarChild {
     }
   }
 
-}
 
-//
-//   constructor(string) {
-//     let lines = this.newFromString(string)
-//     this.lineOne = lines[0];
-//     this.lineTwo = lines[1];
-//     this.lineThree = [2];
-//   }
-//
-//   checkLength(haikuArray) {
-//     if (haikuArray.length != 3) {
-//       return "Age extends Date length invalid"
-//     }
-//   }
-//
-//   newFromString(userString) {
-//     let haikuArray = userString.split(/\r?\n/);
-//     console.log(haikuArray);
-//     return haikuArray;
-//   }
-//
-//   vowelFriendsCount(string) {
-//     const vowels = /[aeiouy]{2,}/ig;
-//
-//     let vowelFriends = string.match(vowels).length
-//
-//     return vowelFriends;
-//
-//   }
-//
-//   vowelCabooseCheck(string) {
-//     if (string.match(/[aeiou]$/i).length != null) {
-//       return 1;
-//     }
-//
-//   }
-//
-//   syllableCount(string) {
-//     debugger;
-//     let vowelCount = this.vowelCount(string,'v');
-//     let vowelFriendsCount = this.vowelFriendsCount(string);
-//     let syllables = vowelCount - vowelFriendsCount;
-//
-//     return syllables;
-//
-//   }
-//
-//
-//
-//   vowelCount(string, returnType) {
-//     const vowels = /[aeiouy]/ig;
-//     const consonants = /[bcdfghjklmnpqrstvwxz]/ig;
-//     const dipthongs = ['oi', 'oy', 'ou', 'ow', 'au', 'aw', 'oo'];
-//
-//     let counterVowels = string.match(vowels).length;
-//     let counterConsonants = string.match(consonants).length;
-//
-//     let charTypes = [counterVowels, counterConsonants];
-//
-//     if (returnType.toLowerCase() == 'v') {
-//       return charTypes[0];
-//     } else if (returnType.toLowerCase() == 'c') {
-//       return charTypes[1];
-//     }
-//     return "Invalid returnType. Must use 'v/c' second argurment in function call."
-//   }
-//
-// }
+
+  planetAge(planet) {
+    const yearInEarthDaysEarth = 365.2422;
+    const yearInEarthDaysMercury = 87.97;
+    const yearInEarthDaysVenus = 224.7;
+    const yearInEarthDaysMars = 687;
+    const yearInEarthDaysJupiter = 4332.59;
+    const yearInEarthDaysSaturn = 10759;
+    const yearInEarthDaysUranus = 30688.5;
+    const yearInEarthDaysNeptune = 60182;
+    const yearInEarthDaysPluto = 90500;
+    const ageInDays = this.ageInDays();
+
+    let planetAgeConversion
+
+    switch(planet.toLowerCase()) {
+      case 'earth':
+        planetAgeConversion = (ageInDays/yearInEarthDaysEarth).toFixed(2);
+        break;
+      case 'mercury':
+        planetAgeConversion = (ageInDays/yearInEarthDaysMercury).toFixed(2);
+        break;
+      case 'venus':
+        planetAgeConversion = (ageInDays/yearInEarthDaysVenus).toFixed(2);
+        break;
+      case 'mars':
+        planetAgeConversion = (ageInDays/yearInEarthDaysMars).toFixed(2);
+        break;
+      case 'jupiter':
+        planetAgeConversion = (ageInDays/yearInEarthDaysJupiter).toFixed(2);
+        break;
+      case 'saturn':
+        planetAgeConversion = (ageInDays/yearInEarthDaysSaturn).toFixed(2);
+        break;
+      case 'uranus':
+        planetAgeConversion = (ageInDays/yearInEarthDaysUranus).toFixed(2);
+        break;
+      case 'neptune':
+        planetAgeConversion = (ageInDays/yearInEarthDaysNeptune).toFixed(2);
+        break;
+      case 'pluto':
+        planetAgeConversion = (ageInDays/yearInEarthDaysPluto).toFixed(2);
+        break;
+      default:
+    }
+    return planetAgeConversion;
+  }
+
+}
