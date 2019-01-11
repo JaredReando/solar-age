@@ -14,7 +14,7 @@ describe('StarChild', function() {
   });
 
   it("creates a new StarChild object", function() {
-    expect(starObject.birthday).toEqual("07-29-1987");
+    expect(starObject).toEqual(starObject);
   });
 
   it("assigns a life expectancy based off of gender", function() {
@@ -22,27 +22,27 @@ describe('StarChild', function() {
   });
 
   it("returns age in Earth years", function() {
-    expect(starObject.planetAge('earth')).toEqual('31.46');
+    expect(starObject.planetAge('earth')).toEqual('31.00');
   });
 
   it("returns age in Mercury years.", function() {
-    expect(starObject.planetAge('mercury')).toEqual('130.61');
+    expect(starObject.planetAge('mercury')).toEqual('128.71');
   });
 
   it("returns age in Venus years.", function() {
-    expect(starObject.planetAge('venus')).toEqual('51.13');
+    expect(starObject.planetAge('venus')).toEqual('50.39');
   });
 
   it("returns age in Mars years.", function() {
-    expect(starObject.planetAge('mars')).toEqual('16.72');
+    expect(starObject.planetAge('mars')).toEqual('16.48');
   });
 
   it("returns age in Jupiter years.", function() {
-    expect(starObject.planetAge('jupiter')).toEqual('2.65');
+    expect(starObject.planetAge('jupiter')).toEqual('2.61');
   });
 
   it("returns age in Saturn years.", function() {
-    expect(starObject.planetAge('saturn')).toEqual('1.07');
+    expect(starObject.planetAge('saturn')).toEqual('1.05');
   });
 
   it("returns age in Uranus years.", function() {
