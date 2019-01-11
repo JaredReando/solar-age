@@ -1,15 +1,15 @@
-import { StarChild } from './../src/starchild.js';
+import { earthAge, millisecondsToDays } from './../src/starchild.js';
 
 
-describe('Age', function() {
+describe('earthAge', function() {
   let userBirthday;
 
   beforeEach(function() {
-    userBirthday = new Age("07-29-1987");
+    userBirthday = new Date("07-29-1987");
   });
 
   it("returns age in Earth years", function() {
-    expect(userBirthday.earthAge()).toEqual(31);
+    expect(earthAge(userBirthday)).toEqual(31);
   });
 
   it("returns age in Mercury years.", function() {

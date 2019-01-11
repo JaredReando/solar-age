@@ -1,12 +1,13 @@
-export class StarChild extends Date {
+export class StarChild {
 
-  constructor() {
-    super();
+  constructor(birthday, sex) {
+    this.birthday = birthday;
+    this.sex = sex;
   }
 
   earthAge() {
     let currentDay = new Date();
-    let birthDate = this;
+    let birthDate = new Date(this.birthday);
     let ageInMilliseconds = currentDay - birthDate;
     let ageInDays = this.millisecondsToDays(ageInMilliseconds);
     let ageInYears = Math.floor((ageInDays/365.2422));
