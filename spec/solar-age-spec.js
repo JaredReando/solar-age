@@ -2,12 +2,13 @@ import { StarChild } from './../src/starchild.js';
 
 
 describe('StarChild', function() {
-  let userBirthday;
+  let today = new Date();
+  let userBirthday = new Date();
   let userSex;
   let starObject;
 
   beforeEach(function() {
-    userBirthday = "07-29-1987";
+    userBirthday.setFullYear(today.getFullYear()-31);
     userSex = 'male';
     starObject = new StarChild(userBirthday, userSex);
   });
