@@ -1,14 +1,29 @@
 export class Age extends Date {
 
-  eathAge() {
+  earthAge() {
     let currentDay = new Date();
-    let refDate = this;
-    let age = currentDay.getFullYear() - refDate.getFullYear();
+    let birthDate = this;
+    let ageInMilliseconds = currentDay - birthDate;
+    let ageInDays = this.millisecondsToDays(ageInMilliseconds);
+    let ageInYears = Math.floor((daysElapsed/365.2422));
 
-    return age;
+    return ageInYears;
   }
 
+
+  millisecondsToDays(milliseconds) {
+    let seconds = (milliseconds/1000);
+    let minutes = (seconds/60);
+    let hours = (minutes/60);
+    let days = (hours/24);
+
+    return days;
+
+
+  }
 }
+
+
   constructor(string) {
     let lines = this.newFromString(string)
     this.lineOne = lines[0];
