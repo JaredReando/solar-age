@@ -1,5 +1,14 @@
-export class Haiku {
+export class Age extends Date {
 
+  eathAge() {
+    let currentDay = new Date();
+    let refDate = this;
+    let age = currentDay.getFullYear() - refDate.getFullYear();
+
+    return age;
+  }
+
+}
   constructor(string) {
     let lines = this.newFromString(string)
     this.lineOne = lines[0];
@@ -9,7 +18,7 @@ export class Haiku {
 
   checkLength(haikuArray) {
     if (haikuArray.length != 3) {
-      return "Haiku length invalid"
+      return "Age extends Date length invalid"
     }
   }
 

@@ -2,35 +2,46 @@ import { Age } from './../src/age';
 
 
 describe('Age', function() {
-  let newHaiku;
+  let userBirthday;
 
   beforeEach(function() {
-    newHaiku = new Haiku("first", "second", "third");
+    userBirthday = new Age("07-29-1987");
   });
 
-  it("creates a new Haiku object", function() {
-    expect(newHaiku.lineOne).toEqual("first");
+  it("returns age in Earth years", function() {
+    expect(userBirthday.earthAge()).toEqual(31);
   });
 
-  it("converts a string into an array from line breaks", function() {
-    let inputString = "this\nis\nstring";
-    expect(newHaiku.newFromString(inputString)).toEqual(["this", "is", "string"]);
+  it("returns age in Mercury years.", function() {
+    expect(userBirthday.mercuryAge()).toEqual(0);
   });
 
-  it("counts the number of vowels in a given string", function() {
-    expect(newHaiku.vowelCount(newHaiku.lineOne, 'v')).toEqual(1);
+  it("returns age in Venus years.", function() {
+    expect(userBirthday.venusAge()).toEqual(0);
   });
 
-  it("counts the number of consonants in a given string", function() {
-    expect(newHaiku.vowelCount(newHaiku.lineOne, 'c')).toEqual(4);
+  it("returns age in Mars years.", function() {
+    expect(userBirthday.marsAge()).toEqual(0);
   });
 
-  it("counts the number of vowel pairs in a given string", function() {
-    expect(newHaiku.vowelFriendsCount('cheese')).toEqual(1);
+  it("returns age in Jupiter years.", function() {
+    expect(userBirthday.jupiterAge()).toEqual(0);
   });
 
-  it("subtracts the number of multi-vowel occurrences from total vowel count.", function() {
-    expect(newHaiku.syllableCount("scooter")).toEqual(2);
+  it("returns age in Saturn years.", function() {
+    expect(userBirthday.saturnAge()).toEqual(0);
+  });
+
+  it("returns age in Uranus years.", function() {
+    expect(userBirthday.uranusAge()).toEqual(0);
+  });
+
+  it("returns age in Neptune years.", function() {
+    expect(userBirthday.neptuneAge()).toEqual(0);
+  });
+
+  it("returns age in Pluto years.", function() {
+    expect(userBirthday.plutoAge()).toEqual(0);
   });
 
 });
