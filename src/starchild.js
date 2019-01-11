@@ -3,6 +3,7 @@ export class StarChild {
   constructor(birthday, sex) {
     this.birthday = birthday;
     this.sex = sex;
+    this.assignLifeExpectancy();
   }
 
   earthAge() {
@@ -23,6 +24,16 @@ export class StarChild {
     let days = (hours/24);
 
     return days;
+  }
+
+  assignLifeExpectancy() {
+    const maleLifeExpectancy = 76;
+    const femaleLifeExpectancy = 81;
+    if (this.sex == 'male') {
+      this.lifeExpectancy = maleLifeExpectancy;
+    } else if (this.sex == 'female') {
+      this.lifeExpectancy = femaleLifeExpectancy;
+    }
   }
 
 }

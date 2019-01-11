@@ -16,6 +16,10 @@ describe('StarChild', function() {
     expect(starObject.birthday).toEqual("07-29-1987");
   });
 
+  it("assigns a life expectancy based off of gender", function() {
+    expect(starObject.lifeExpectancy).toEqual(76);
+  });
+
   it("returns age in Earth years", function() {
     expect(earthAge(userBirthday)).toEqual(31);
   });
