@@ -5,12 +5,6 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-const planetStats =
-
-
-
-
-
 $(document).ready(function() {
   $('#solar-submit').submit(function(event) {
     event.preventDefault();
@@ -22,13 +16,14 @@ $(document).ready(function() {
     $('#solar-readout').text(userEarthAge);
     $('#birthday').val('');
 
-
-
-    let planets = ['earth', 'mars', 'jupiter'];
+    let planets = ['mercury', 'venus', 'earth', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto'];
 
     planets.forEach(function(planet) {
       let ageOnPlanet = newObject.planetAge(planet);
+      let capitalPlanet = planet.charAt(0).toUpperCase() + planet.slice(1);
+      $(`#${planet}-list`).empty();
       $(`#${planet}-list`).append(`<li class="list-group-item">Age: ${ageOnPlanet} years</li>`);
+      $(`#${planet}-list`).append(`<li class="list-group-item">Dead in: 1 ${capitalPlanet} day</li>`);
     });
   });
 });
