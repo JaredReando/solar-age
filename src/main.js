@@ -5,7 +5,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
-
+const planetStats =
 
 
 
@@ -22,5 +22,13 @@ $(document).ready(function() {
     $('#solar-readout').text(userEarthAge);
     $('#birthday').val('');
 
+
+
+    let planets = ['earth', 'mars', 'jupiter'];
+
+    planets.forEach(function(planet) {
+      let ageOnPlanet = newObject.planetAge(planet);
+      $(`#${planet}-list`).append(`<li class="list-group-item">Age: ${ageOnPlanet} years</li>`);
+    });
   });
 });

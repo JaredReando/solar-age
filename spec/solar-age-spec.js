@@ -57,4 +57,8 @@ describe('StarChild', function() {
     expect(starObject.planetAge('pluto')).toEqual('0.13');
   });
 
+  it("calculates years left to live relative to a planet's year length", function() {
+    expect(starObject.tickTock('earth')).toEqual()
+  }
+
 });

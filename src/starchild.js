@@ -45,6 +45,53 @@ export class StarChild {
     }
   }
 
+  // tickTock(planet) {
+  //   const yearInEarthDaysEarth = 365.2422;
+  //   const yearInEarthDaysMercury = 87.97;
+  //   const yearInEarthDaysVenus = 224.7;
+  //   const yearInEarthDaysMars = 687;
+  //   const yearInEarthDaysJupiter = 4332.59;
+  //   const yearInEarthDaysSaturn = 10759;
+  //   const yearInEarthDaysUranus = 30688.5;
+  //   const yearInEarthDaysNeptune = 60182;
+  //   const yearInEarthDaysPluto = 90500;
+  //   const ageInDays = this.ageInDays();
+  //
+  //   let planetLifeExpectancy
+  //
+  //   switch(planet.toLowerCase()) {
+  //     case 'earth':
+  //       planetAgeConversion = (ageInDays/yearInEarthDaysEarth).toFixed(2);
+  //       break;
+  //     case 'mercury':
+  //       planetAgeConversion = (ageInDays/yearInEarthDaysMercury).toFixed(2);
+  //       break;
+  //     case 'venus':
+  //       planetAgeConversion = (ageInDays/yearInEarthDaysVenus).toFixed(2);
+  //       break;
+  //     case 'mars':
+  //       planetAgeConversion = (ageInDays/yearInEarthDaysMars).toFixed(2);
+  //       break;
+  //     case 'jupiter':
+  //       planetAgeConversion = (ageInDays/yearInEarthDaysJupiter).toFixed(2);
+  //       break;
+  //     case 'saturn':
+  //       planetAgeConversion = (ageInDays/yearInEarthDaysSaturn).toFixed(2);
+  //       break;
+  //     case 'uranus':
+  //       planetAgeConversion = (ageInDays/yearInEarthDaysUranus).toFixed(2);
+  //       break;
+  //     case 'neptune':
+  //       planetAgeConversion = (ageInDays/yearInEarthDaysNeptune).toFixed(2);
+  //       break;
+  //     case 'pluto':
+  //       planetAgeConversion = (ageInDays/yearInEarthDaysPluto).toFixed(2);
+  //       break;
+  //     default:
+  //   }
+  //   return planetLifeExpectancy;
+  // }
+
 
 
   planetAge(planet) {
