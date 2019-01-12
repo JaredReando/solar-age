@@ -1,4 +1,4 @@
-# Solar Age Converter
+# Space Age Converter
 
 #### January 11th, 2019
 
