@@ -10,7 +10,7 @@ A simple application for determining your age based on the orbital period of our
 
 ## Setup and Installation
 
-1. Clone the project from https://github.com/jaredreando/solar-hunt.git to a local directory
+1. Clone the project from https://github.com/jaredreando/space-age.git to a local directory
 
 2. Make sure Node is installed on your machine
 
