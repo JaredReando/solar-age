@@ -17,7 +17,7 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'solar-age',
+      title: 'space-age',
       template: './src/index.html',
       inject: 'body'
     })
@@ -40,7 +40,7 @@ module.exports = {
         loader: "eslint-loader"
       },
       {
-          test: /\.(png|jp(e*)g|svg)$/,  
+          test: /\.(png|jp(e*)g|svg)$/,
           use: [{
               loader: 'url-loader',
               options: {

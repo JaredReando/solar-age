@@ -1,6 +1,6 @@
 # Solar Age Converter
 
-#### January 11th, 201
+#### January 11th, 2019
 
 ### _Jared Reando_
 
@@ -12,34 +12,34 @@ A simple application for determining your age based on the orbital period of our
 
 1. Clone the project from https://github.com/jaredreando/solar-hunt.git to a local directory
 
-2. From the project directory, set up
+2. Make sure Node is installed on your machine
 
-3. From the terminal, go the project directory and start the Rails server with:
-```console
-rails s
+3. Download project dependencies using the `npm run test` command in the Terminal
+
+4. Run spec tests with the `npm run test` command
+
+5. To view the locally hosted project in a browser, run command `npm run start`
 
 
-## Further Development
+## Objectives
 
-  ### Current Features
-  - [x] Unique user authentication
-  - [] Specs were committed before any code.
+- [x] Specs were committed before any code.
 
-  - [] Business logic is thoroughly tested with Jasmine.
+- [x] Business logic is thoroughly tested with Jasmine.
 
-  - [] Karma is set up correctly.
+- [x] Karma is set up correctly.
 
-  - [] Project utilizes ES6 features including classes, let and const.
+- [x] Project utilizes ES6 features including classes, let and const.
 
-  - []  Dependencies are managed with npm.
+- [x]  Dependencies are managed with npm.
 
-  - [] Application uses webpack to lint, bundle, and process code.
+- [x] Application uses webpack to lint, bundle, and process code.
 
-  - [] Project is in a polished, portfolio-quality state. (Clear code presentation, error free, complete README, commit history, etc.)
+- [x] Project is in a polished, portfolio-quality state. (Clear code presentation, error free, complete README, commit history, etc.)
 
-  - [] Required functionality was in place by the Friday deadline.
+- [x] Required functionality was in place by the Friday deadline.
 
-  - [] Project demonstrates understanding of week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology.
+- [x] Project demonstrates understanding of week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology.
 
 ## Support and Contact Details
 
