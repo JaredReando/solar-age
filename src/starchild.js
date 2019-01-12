@@ -10,19 +10,19 @@ export class StarChild {
     let currentDay = new Date();
     let birthDate = new Date(this.birthday);
     let ageInMilliseconds = currentDay - birthDate;
-    let ageInDays = this.millisecondsToDays(ageInMilliseconds);
-    let ageInYears = Math.floor((ageInDays/365.2422));
+    let ageInEarthDays = this.millisecondsToDays(ageInMilliseconds);
+    let ageInYears = Math.floor((ageInEarthDays/365.2422));
 
     return ageInYears;
   }
 
-  ageInDays() {
+  ageInEarthDays() {
     let currentDay = new Date();
     let birthDate = new Date(this.birthday);
     let ageInMilliseconds = currentDay - birthDate;
-    let ageInDays = this.millisecondsToDays(ageInMilliseconds);
+    let ageInEarthDays = this.millisecondsToDays(ageInMilliseconds);
 
-    return ageInDays;
+    return ageInEarthDays;
 
   }
 
@@ -55,42 +55,44 @@ export class StarChild {
     const yearInEarthDaysUranus = 30688.5;
     const yearInEarthDaysNeptune = 60182;
     const yearInEarthDaysPluto = 90500;
-    let ageInDays = this.ageInDays();
-    let lifeExpectancyInEarthDays = (this.lifeExpectancy * yearInEarthDaysEarth);
 
-    let planetLifeExpectancy
+    let ageInEarthDays = this.ageInEarthDays();
+    let lifeExpectancyInEarthDays = (this.lifeExpectancy * yearInEarthDaysEarth);
+    let earthDaysLeft = (lifeExpectancyInEarthDays - ageInEarthDays);
+
+    let lifeLeftInPlanetYears;
 
     switch(planet.toLowerCase()) {
       case 'earth':
-        planetAgeConversion = (ageInDays/yearInEarthDaysEarth).toFixed(2);
+        lifeLeftInPlanetYears = (earthDaysLeft/yearInEarthDaysEarth).toFixed(2);
         break;
       case 'mercury':
-        planetAgeConversion = (ageInDays/yearInEarthDaysMercury).toFixed(2);
+        lifeLeftInPlanetYears = (earthDaysLeft/yearInEarthDaysMercury).toFixed(2);
         break;
       case 'venus':
-        planetAgeConversion = (ageInDays/yearInEarthDaysVenus).toFixed(2);
+        lifeLeftInPlanetYears = (earthDaysLeft/yearInEarthDaysVenus).toFixed(2);
         break;
       case 'mars':
-        planetAgeConversion = (ageInDays/yearInEarthDaysMars).toFixed(2);
+        lifeLeftInPlanetYears = (earthDaysLeft/yearInEarthDaysMars).toFixed(2);
         break;
       case 'jupiter':
-        planetAgeConversion = (ageInDays/yearInEarthDaysJupiter).toFixed(2);
+        lifeLeftInPlanetYears = (earthDaysLeft/yearInEarthDaysJupiter).toFixed(2);
         break;
       case 'saturn':
-        planetAgeConversion = (ageInDays/yearInEarthDaysSaturn).toFixed(2);
+        lifeLeftInPlanetYears = (earthDaysLeft/yearInEarthDaysSaturn).toFixed(2);
         break;
       case 'uranus':
-        planetAgeConversion = (ageInDays/yearInEarthDaysUranus).toFixed(2);
+        lifeLeftInPlanetYears = (earthDaysLeft/yearInEarthDaysUranus).toFixed(2);
         break;
       case 'neptune':
-        planetAgeConversion = (ageInDays/yearInEarthDaysNeptune).toFixed(2);
+        lifeLeftInPlanetYears = (earthDaysLeft/yearInEarthDaysNeptune).toFixed(2);
         break;
       case 'pluto':
-        planetAgeConversion = (ageInDays/yearInEarthDaysPluto).toFixed(2);
+        lifeLeftInPlanetYears = (earthDaysLeft/yearInEarthDaysPluto).toFixed(2);
         break;
       default:
     }
-    return planetLifeExpectancy;
+    return lifeLeftInPlanetYears;
   }
 
 
@@ -105,37 +107,37 @@ export class StarChild {
     const yearInEarthDaysUranus = 30688.5;
     const yearInEarthDaysNeptune = 60182;
     const yearInEarthDaysPluto = 90500;
-    const ageInDays = this.ageInDays();
+    const ageInEarthDays = this.ageInEarthDays();
 
     let planetAgeConversion
 
     switch(planet.toLowerCase()) {
       case 'earth':
-        planetAgeConversion = (ageInDays/yearInEarthDaysEarth).toFixed(2);
+        planetAgeConversion = (ageInEarthDays/yearInEarthDaysEarth).toFixed(2);
         break;
       case 'mercury':
-        planetAgeConversion = (ageInDays/yearInEarthDaysMercury).toFixed(2);
+        planetAgeConversion = (ageInEarthDays/yearInEarthDaysMercury).toFixed(2);
         break;
       case 'venus':
-        planetAgeConversion = (ageInDays/yearInEarthDaysVenus).toFixed(2);
+        planetAgeConversion = (ageInEarthDays/yearInEarthDaysVenus).toFixed(2);
         break;
       case 'mars':
-        planetAgeConversion = (ageInDays/yearInEarthDaysMars).toFixed(2);
+        planetAgeConversion = (ageInEarthDays/yearInEarthDaysMars).toFixed(2);
         break;
       case 'jupiter':
-        planetAgeConversion = (ageInDays/yearInEarthDaysJupiter).toFixed(2);
+        planetAgeConversion = (ageInEarthDays/yearInEarthDaysJupiter).toFixed(2);
         break;
       case 'saturn':
-        planetAgeConversion = (ageInDays/yearInEarthDaysSaturn).toFixed(2);
+        planetAgeConversion = (ageInEarthDays/yearInEarthDaysSaturn).toFixed(2);
         break;
       case 'uranus':
-        planetAgeConversion = (ageInDays/yearInEarthDaysUranus).toFixed(2);
+        planetAgeConversion = (ageInEarthDays/yearInEarthDaysUranus).toFixed(2);
         break;
       case 'neptune':
-        planetAgeConversion = (ageInDays/yearInEarthDaysNeptune).toFixed(2);
+        planetAgeConversion = (ageInEarthDays/yearInEarthDaysNeptune).toFixed(2);
         break;
       case 'pluto':
-        planetAgeConversion = (ageInDays/yearInEarthDaysPluto).toFixed(2);
+        planetAgeConversion = (ageInEarthDays/yearInEarthDaysPluto).toFixed(2);
         break;
       default:
     }
@@ -143,3 +145,4 @@ export class StarChild {
   }
 
 }
+var jared = new StarChild('7-29-1987', 'male')

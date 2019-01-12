@@ -9,7 +9,8 @@ $(document).ready(function() {
   $('#solar-submit').submit(function(event) {
     event.preventDefault();
     let userDate = $('#birthday').val();
-    let newObject = new StarChild(userDate, 'male');
+    let userSex = $('#space-gender').val();
+    let newObject = new StarChild(userDate, userSex);
     let userBirthday = new Date(userDate);
     let userEarthAge = newObject.earthAge(newObject.birthday);
 
@@ -21,9 +22,10 @@ $(document).ready(function() {
     planets.forEach(function(planet) {
       let ageOnPlanet = newObject.planetAge(planet);
       let capitalPlanet = planet.charAt(0).toUpperCase() + planet.slice(1);
+      let lifeLeftInPlanetYears = newObject.tickTock(planet);
       $(`#${planet}-list`).empty();
       $(`#${planet}-list`).append(`<li class="list-group-item">Age: ${ageOnPlanet} years</li>`);
-      $(`#${planet}-list`).append(`<li class="list-group-item">Dead in: 1 ${capitalPlanet} day</li>`);
+      $(`#${planet}-list`).append(`<li class="list-group-item">Dead in: ${lifeLeftInPlanetYears} ${capitalPlanet} years</li>`);
     });
   });
 });

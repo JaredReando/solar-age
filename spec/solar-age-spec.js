@@ -58,7 +58,7 @@ describe('StarChild', function() {
   });
 
   it("calculates years left to live relative to a planet's year length", function() {
-    expect(starObject.tickTock('earth')).toEqual()
-  }
+    expect(starObject.tickTock('earth')).toEqual('45.00')
+  });
 
 });
